@@ -161,6 +161,23 @@
             .hero-badge-text .number{font-size:1.5rem}
             .hero-badge-text .label{font-size:.65rem}
         }
+        /* Footer critical styles */
+        footer{padding:5rem 4rem 2rem;background:var(--black);color:var(--cream)}
+        .footer-content{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:4rem;max-width:1400px;margin:0 auto 4rem}
+        .footer-brand img{height:30px;width:auto;margin-bottom:1.5rem;filter:brightness(0) invert(1)}
+        .footer-brand p{font-size:.95rem;opacity:.7;max-width:300px}
+        .footer-social{display:flex;gap:1rem;margin-top:1.5rem}
+        .footer-social a{width:40px;height:40px;background:rgba(255,255,255,.1);border-radius:50%;display:flex;align-items:center;justify-content:center}
+        .footer-social svg{fill:var(--cream)}
+        .footer-links h4{font-family:'Futura',sans-serif;font-size:1.3rem;font-weight:600;margin-bottom:1.5rem}
+        .footer-links ul{list-style:none}
+        .footer-links li{margin-bottom:.8rem}
+        .footer-links a{text-decoration:none;color:var(--cream);opacity:.7;font-size:.9rem}
+        .footer-links .footer-address{margin-top:1.2rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,.1);font-size:.85rem;color:var(--cream);opacity:.6;line-height:1.6}
+        .footer-bottom{padding-top:2rem;border-top:1px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;font-size:.85rem;opacity:.6;max-width:1400px;margin:0 auto}
+        .footer-bottom a{color:var(--cream);text-decoration:none}
+        @media(max-width:991px){.footer-content{grid-template-columns:1fr 1fr}}
+        @media(max-width:576px){footer{padding:3rem 1.5rem 1.5rem}.footer-content{grid-template-columns:1fr;gap:2.5rem}.footer-brand{text-align:center}.footer-brand p{max-width:100%;margin:0 auto}.footer-social{justify-content:center}.footer-links{text-align:center}.footer-links h4{font-size:1.1rem;margin-bottom:1rem}.footer-bottom{flex-direction:column;gap:1rem;text-align:center}}
     </style>
 
     <link rel="stylesheet" href="css/fonts.css">
