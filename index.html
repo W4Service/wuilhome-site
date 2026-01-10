@@ -187,19 +187,20 @@
     <link rel="stylesheet" href="css/style.css" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="css/fonts.css"><link rel="stylesheet" href="css/style.css"></noscript>
 
-    <!-- Consent Mode V2 - état par défaut (doit être avant GA) -->
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('consent', 'default', {
-            ad_storage: 'denied',
-            analytics_storage: 'denied',
-            ad_user_data: 'denied',
-            ad_personalization: 'denied'
-        });
-    </script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5LK2LZ65');</script>
+    <!-- End Google Tag Manager -->
 </head>
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5LK2LZ65"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <!-- Skip link pour accessibilité -->
     <a href="#main-content" class="skip-link">Aller au contenu principal</a>
 
@@ -566,57 +567,6 @@
     </footer>
 
     <script src="js/main.js"></script>
-
-    <!-- Scripts tiers chargés après interaction utilisateur pour performance optimale -->
-    <script>
-        (function() {
-            var scriptsLoaded = false;
-            function loadThirdPartyScripts() {
-                if (scriptsLoaded) return;
-                scriptsLoaded = true;
-
-                // Charger Tarteaucitron
-                var tac = document.createElement('script');
-                tac.src = 'https://cdn.jsdelivr.net/npm/tarteaucitronjs@1/tarteaucitron.min.js';
-                tac.onload = function() {
-                    tarteaucitron.init({
-                        privacyUrl: "mentions-legales/",
-                        orientation: "bottom",
-                        showAlertSmall: false,
-                        cookieslist: true,
-                        adblocker: false,
-                        AcceptAllCta: true,
-                        highPrivacy: true,
-                        handleBrowserDNTRequest: false,
-                        removeCredit: true,
-                        moreInfoLink: false
-                    });
-                    tarteaucitron.user.gtagUa = 'G-Q5VC23HM27';
-                    (tarteaucitron.job = tarteaucitron.job || []).push('gtag');
-                };
-                document.body.appendChild(tac);
-
-                // Charger Google Analytics
-                var ga = document.createElement('script');
-                ga.src = 'https://www.googletagmanager.com/gtag/js?id=G-Q5VC23HM27';
-                ga.onload = function() {
-                    gtag('js', new Date());
-                    gtag('config', 'G-Q5VC23HM27');
-                };
-                document.body.appendChild(ga);
-            }
-
-            // Charger après 3s ou à la première interaction
-            var events = ['scroll', 'click', 'touchstart', 'keydown'];
-            var timeout = setTimeout(loadThirdPartyScripts, 3000);
-            events.forEach(function(e) {
-                window.addEventListener(e, function() {
-                    clearTimeout(timeout);
-                    loadThirdPartyScripts();
-                }, { once: true, passive: true });
-            });
-        })();
-    </script>
 
     <!-- Lazy loading TrustIndex -->
     <script>

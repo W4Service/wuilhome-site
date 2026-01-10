@@ -33,48 +33,23 @@
     <meta name="twitter:description" content="Gestion locative premium pour tous les arrondissements parisiens.">
     <meta name="twitter:image" content="https://wuilhome.com/images/og-image.webp">
 
-    <!-- Tarteaucitron (gestion des cookies RGPD) -->
-    <script src="https://cdn.jsdelivr.net/npm/tarteaucitronjs@1/tarteaucitron.min.js"></script>
-    <script>
-        tarteaucitron.init({
-            privacyUrl: "../../mentions-legales/",
-            orientation: "bottom",
-            showAlertSmall: false,
-            cookieslist: true,
-            adblocker: false,
-            AcceptAllCta: true,
-            highPrivacy: true,
-            handleBrowserDNTRequest: false,
-            removeCredit: true,
-            moreInfoLink: false
-        });
-        tarteaucitron.user.gtagUa = 'G-Q5VC23HM27';
-        (tarteaucitron.job = tarteaucitron.job || []).push('gtag');
-    </script>
-
-    <!-- Consent Mode V2 - état par défaut -->
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('consent', 'default', {
-            ad_storage: 'denied',
-            analytics_storage: 'denied',
-            ad_user_data: 'denied',
-            ad_personalization: 'denied'
-        });
-    </script>
-
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q5VC23HM27"></script>
-    <script>
-        gtag('js', new Date());
-        gtag('config', 'G-Q5VC23HM27');
-    </script>
-
     <link rel="stylesheet" href="../../css/fonts.css">
     <link rel="stylesheet" href="../../css/style.css">
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5LK2LZ65');</script>
+    <!-- End Google Tag Manager -->
 </head>
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5LK2LZ65"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <!-- Navigation -->
     <nav id="navbar">
         <a href="../../" class="logo">

@@ -13,50 +13,15 @@
     <link rel="manifest" href="/site.webmanifest">
     <meta name="theme-color" content="#1E3A5F">
 
-    <!-- Tarteaucitron (gestion des cookies) -->
-    <script src="https://cdn.jsdelivr.net/npm/tarteaucitronjs@1/tarteaucitron.min.js"></script>
-    <script>
-        tarteaucitron.init({
-            privacyUrl: "../mentions-legales/",
-            orientation: "bottom",
-            showAlertSmall: false,
-            cookieslist: true,
-            adblocker: false,
-            AcceptAllCta: true,
-            highPrivacy: true,
-            handleBrowserDNTRequest: false,
-            removeCredit: true,
-            moreInfoLink: false
-        });
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5LK2LZ65');</script>
+    <!-- End Google Tag Manager -->
 
-        // Service Google Analytics avec Consent Mode
-        tarteaucitron.user.gtagUa = 'G-Q5VC23HM27';
-        (tarteaucitron.job = tarteaucitron.job || []).push('gtag');
-    </script>
-
-    <!-- Consent Mode V2 - état par défaut (refus) -->
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-
-        gtag('consent', 'default', {
-            ad_storage: 'denied',
-            analytics_storage: 'denied',
-            ad_user_data: 'denied',
-            ad_personalization: 'denied'
-        });
-    </script>
-
-    <!-- Google Tag -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q5VC23HM27"></script>
-    <script>
-        gtag('js', new Date());
-        gtag('config', 'G-Q5VC23HM27', {
-            send_page_view: true
-        });
-    </script>
-
-    <!-- Redirection (après tracking autorisé) -->
+    <!-- Redirection -->
     <script>
         const DESTINATION_URL = "https://wuilhome.com";
         setTimeout(() => {
