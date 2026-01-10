@@ -84,26 +84,15 @@
     }
     </script>
 
-    <!-- Tarteaucitron (gestion des cookies RGPD) -->
-    <script src="https://cdn.jsdelivr.net/npm/tarteaucitronjs@1/tarteaucitron.min.js"></script>
-    <script>
-        tarteaucitron.init({
-            privacyUrl: "mentions-legales/",
-            orientation: "bottom",
-            showAlertSmall: false,
-            cookieslist: true,
-            adblocker: false,
-            AcceptAllCta: true,
-            highPrivacy: true,
-            handleBrowserDNTRequest: false,
-            removeCredit: true,
-            moreInfoLink: false
-        });
-        tarteaucitron.user.gtagUa = 'G-Q5VC23HM27';
-        (tarteaucitron.job = tarteaucitron.job || []).push('gtag');
-    </script>
+    <!-- Preload ressources critiques -->
+    <link rel="preload" href="images/hero-main.webp" as="image" type="image/webp">
+    <link rel="preload" href="fonts/futura-medium.otf" as="font" type="font/otf" crossorigin>
+    <link rel="preload" href="fonts/alpine.otf" as="font" type="font/otf" crossorigin>
 
-    <!-- Consent Mode V2 - état par défaut -->
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Consent Mode V2 - état par défaut (doit être avant GA) -->
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
@@ -114,20 +103,6 @@
             ad_personalization: 'denied'
         });
     </script>
-
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q5VC23HM27"></script>
-    <script>
-        gtag('js', new Date());
-        gtag('config', 'G-Q5VC23HM27');
-    </script>
-
-    <!-- Preload fonts critiques -->
-    <link rel="preload" href="fonts/futura-medium.otf" as="font" type="font/otf" crossorigin>
-    <link rel="preload" href="fonts/alpine.otf" as="font" type="font/otf" crossorigin>
-
-    <link rel="stylesheet" href="css/fonts.css">
-    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <!-- Skip link pour accessibilité -->
@@ -181,7 +156,7 @@
             </div>
             <div class="hero-visual">
                 <div class="hero-image">
-                    <img src="images/hero-main.webp" alt="Appartement premium géré par Wuilhome - Conciergerie Airbnb Paris">
+                    <img src="images/hero-main.webp" alt="Appartement premium géré par Wuilhome - Conciergerie Airbnb Paris" fetchpriority="high">
                 </div>
                 <div class="hero-badge">
                     <div class="hero-badge-icon">
@@ -486,5 +461,37 @@
     </footer>
 
     <script src="js/main.js"></script>
+
+    <!-- Scripts différés pour performance (chargés après le contenu) -->
+    <script defer src="https://cdn.jsdelivr.net/npm/tarteaucitronjs@1/tarteaucitron.min.js"></script>
+    <script>
+        window.addEventListener('load', function() {
+            if (typeof tarteaucitron !== 'undefined') {
+                tarteaucitron.init({
+                    privacyUrl: "mentions-legales/",
+                    orientation: "bottom",
+                    showAlertSmall: false,
+                    cookieslist: true,
+                    adblocker: false,
+                    AcceptAllCta: true,
+                    highPrivacy: true,
+                    handleBrowserDNTRequest: false,
+                    removeCredit: true,
+                    moreInfoLink: false
+                });
+                tarteaucitron.user.gtagUa = 'G-Q5VC23HM27';
+                (tarteaucitron.job = tarteaucitron.job || []).push('gtag');
+            }
+        });
+    </script>
+
+    <!-- Google Analytics (différé) -->
+    <script defer src="https://www.googletagmanager.com/gtag/js?id=G-Q5VC23HM27"></script>
+    <script>
+        window.addEventListener('load', function() {
+            gtag('js', new Date());
+            gtag('config', 'G-Q5VC23HM27');
+        });
+    </script>
 </body>
 </html>
