@@ -1,0 +1,53 @@
+name: Fetch Channex Reviews
+
+on:
+  schedule:
+    - cron: '0 6 * * *'
+  workflow_dispatch:
+
+jobs:
+  fetch-reviews:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Fetch reviews from Channex API
+        env:
+          CHANNEX_API_KEY: ${{ secrets.CHANNEX_API_KEY }}
+        run: |
+          curl -s -X GET "https://app.channex.io/api/v1/reviews?pagination[page]=1&pagination[limit]=15&order[inserted_at]=desc" \
+            -H "Content-Type: application/json" \
+            -H "user-api-key: ${CHANNEX_API_KEY}" \
+            -o channex_response.json
+          cat channex_response.json
+
+      - name: Transform reviews to JSON
+        run: |
+          node << 'SCRIPT'
+          const fs = require('fs');
+          const response = JSON.parse(fs.readFileSync('channex_response.json', 'utf8'));
+          const reviews = (response.data || []).map(r => ({
+            id: r.id,
+            guest_name: r.attributes?.guest_name || 'Voyageur',
+            rating: r.attributes?.general_rating || 5,
+            comment: r.attributes?.guest_comment || '',
+            date: r.attributes?.inserted_at || new Date().toISOString(),
+            platform: r.attributes?.ota || 'Booking'
+          })).filter(r => r.comment);
+          fs.writeFileSync('data/reviews.json', JSON.stringify({
+            updated_at: new Date().toISOString(),
+            count: reviews.length,
+            reviews: reviews.slice(0, 15)
+          }, null, 2));
+          SCRIPT
+
+      - name: Commit and push
+        run: |
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.name "github-actions[bot]"
+          git add data/reviews.json
+          git diff --staged --quiet || git commit -m "Update reviews from Channex"
+          git push
