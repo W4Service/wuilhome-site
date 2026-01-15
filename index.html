@@ -447,9 +447,8 @@
                 </div>
             </div>
             <div id="travelers" class="testimonials-content">
-                <div class="trustindex-widget trustindex-limit-3" id="trustindex-container">
-                    <!-- TrustIndex chargé dynamiquement au clic sur l'onglet Voyageurs -->
-                    <p class="trustindex-loading" style="text-align: center; padding: 2rem; color: #666;">Chargement des avis...</p>
+                <div class="reviews-widget reviews-limit-3" id="travelers-reviews">
+                    <p class="reviews-loading">Chargement des avis...</p>
                 </div>
             </div>
             <div id="owners" class="testimonials-content">
@@ -618,34 +617,7 @@
         })();
     </script>
 
-    <!-- Lazy loading TrustIndex -->
-    <script>
-        (function() {
-            var trustIndexLoaded = false;
-            var travelersTab = document.querySelector('[data-target="travelers"]');
-
-            function loadTrustIndex() {
-                if (trustIndexLoaded) return;
-                trustIndexLoaded = true;
-
-                var container = document.getElementById('trustindex-container');
-                if (!container) return;
-
-                // Supprimer le message de chargement
-                var loading = container.querySelector('.trustindex-loading');
-                if (loading) loading.remove();
-
-                // Créer et injecter le script TrustIndex
-                var script = document.createElement('script');
-                script.src = 'https://cdn.trustindex.io/loader.js?781c2b0619ab81612a861036fe6';
-                script.async = true;
-                container.appendChild(script);
-            }
-
-            if (travelersTab) {
-                travelersTab.addEventListener('click', loadTrustIndex);
-            }
-        })();
-    </script>
+    <!-- Reviews Widget - Channex -->
+    <script src="js/reviews.js"></script>
 </body>
 </html>
