@@ -18,17 +18,18 @@ jobs:
         env:
           CHANNEX_API_KEY: ${{ secrets.CHANNEX_API_KEY }}
         run: |
-          curl -s -X GET "https://app.channex.io/api/v1/reviews?pagination[page]=1&pagination[limit]=15&order[inserted_at]=desc" \
+          curl -s -X GET "https://app.channex.io/api/v1/reviews?pagination[page]=1&pagination[limit]=50&order[inserted_at]=desc" \
             -H "Content-Type: application/json" \
             -H "user-api-key: ${CHANNEX_API_KEY}" \
             -o channex_response.json
           cat channex_response.json
 
-      - name: Transform reviews to JSON
+      - name: Transform and filter reviews
         run: |
           node << 'SCRIPT'
           const fs = require('fs');
           const response = JSON.parse(fs.readFileSync('channex_response.json', 'utf8'));
+          
           const reviews = (response.data || []).map(r => ({
             id: r.id,
             guest_name: r.attributes?.guest_name || 'Voyageur',
@@ -36,12 +37,28 @@ jobs:
             comment: r.attributes?.guest_comment || '',
             date: r.attributes?.inserted_at || new Date().toISOString(),
             platform: r.attributes?.ota || 'Booking'
-          })).filter(r => r.comment);
+          })).filter(r => {
+            // Filtrer: doit avoir un commentaire
+            if (!r.comment) return false;
+            
+            // Filtrer par note selon la plateforme
+            // Airbnb: 5/5 seulement
+            // Booking: 9/10 ou 10/10 (donc >= 9)
+            if (r.platform === 'Airbnb') {
+              return r.rating >= 5;
+            } else {
+              // Booking note sur 10, on garde 9 et 10
+              return r.rating >= 9;
+            }
+          });
+          
           fs.writeFileSync('data/reviews.json', JSON.stringify({
             updated_at: new Date().toISOString(),
             count: reviews.length,
             reviews: reviews.slice(0, 15)
           }, null, 2));
+          
+          console.log('Filtered reviews:', reviews.length);
           SCRIPT
 
       - name: Commit and push
