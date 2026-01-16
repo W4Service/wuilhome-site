@@ -18,7 +18,7 @@ jobs:
         env:
           CHANNEX_API_KEY: ${{ secrets.CHANNEX_API_KEY }}
         run: |
-          curl -s -X GET "https://app.channex.io/api/v1/reviews?pagination[page]=1&pagination[limit]=50&order[inserted_at]=desc" \
+          curl -s -X GET "https://app.channex.io/api/v1/reviews?pagination%5Bpage%5D=1&pagination%5Blimit%5D=100&order%5Binserted_at%5D=desc" \
             -H "Content-Type: application/json" \
             -H "user-api-key: ${CHANNEX_API_KEY}" \
             -o channex_response.json
@@ -30,35 +30,51 @@ jobs:
           const fs = require('fs');
           const response = JSON.parse(fs.readFileSync('channex_response.json', 'utf8'));
           
-          const reviews = (response.data || []).map(r => ({
-            id: r.id,
-            guest_name: r.attributes?.guest_name || 'Voyageur',
-            rating: r.attributes?.general_rating || 5,
-            comment: r.attributes?.guest_comment || '',
-            date: r.attributes?.inserted_at || new Date().toISOString(),
-            platform: r.attributes?.ota || 'Booking'
-          })).filter(r => {
-            // Filtrer: doit avoir un commentaire
-            if (!r.comment) return false;
+          const reviews = (response.data || []).map(r => {
+            const attrs = r.attributes || {};
             
-            // Filtrer par note selon la plateforme
-            // Airbnb: 5/5 seulement
-            // Booking: 9/10 ou 10/10 (donc >= 9)
-            if (r.platform === 'Airbnb') {
-              return r.rating >= 5;
-            } else {
-              // Booking note sur 10, on garde 9 et 10
-              return r.rating >= 9;
+            // Extraire le commentaire selon la plateforme
+            let comment = '';
+            if (attrs.raw_content?.public_review) {
+              comment = attrs.raw_content.public_review;
+            } else if (attrs.raw_content?.positive) {
+              comment = attrs.raw_content.positive;
+            } else if (attrs.content) {
+              // Nettoyer le content (enlever "Public review:" etc.)
+              comment = attrs.content.replace(/^(Public review:|Headline:|Positive:|Negative:)\s*/gi, '').trim();
             }
+            
+            return {
+              id: r.id,
+              guest_name: attrs.guest_name || 'Voyageur',
+              rating: attrs.overall_score || 10,
+              comment: comment,
+              date: attrs.received_at || attrs.inserted_at || new Date().toISOString(),
+              platform: attrs.ota === 'AirBNB' ? 'Airbnb' : 'Booking'
+            };
+          }).filter(r => {
+            // Doit avoir un commentaire
+            if (!r.comment || r.comment.length < 5) return false;
+            
+            // Filtrer par note (sur 10)
+            // Airbnb: 10/10 seulement (équivalent 5/5)
+            // Booking: >= 9/10
+            return r.rating >= 9;
           });
+          
+          // Trier par date et garder les 15 plus récents
+          const sortedReviews = reviews
+            .sort((a, b) => new Date(b.date) - new Date(a.date))
+            .slice(0, 15);
           
           fs.writeFileSync('data/reviews.json', JSON.stringify({
             updated_at: new Date().toISOString(),
-            count: reviews.length,
-            reviews: reviews.slice(0, 15)
+            count: sortedReviews.length,
+            reviews: sortedReviews
           }, null, 2));
           
-          console.log('Filtered reviews:', reviews.length);
+          console.log('Total reviews fetched:', response.data?.length || 0);
+          console.log('Filtered reviews (rating >= 9):', sortedReviews.length);
           SCRIPT
 
       - name: Commit and push
