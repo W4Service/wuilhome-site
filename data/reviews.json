@@ -1,5 +1,126 @@
 {
-  "updated_at": "2025-01-15T00:00:00.000Z",
-  "count": 0,
-  "reviews": []
+  "updated_at": "2026-01-17T19:27:53.697Z",
+  "count": 15,
+  "reviews": [
+    {
+      "id": "c4b501a8-517b-42c3-a37a-992809463c46",
+      "guest_name": "Gilles Dupire",
+      "rating": 10,
+      "comment": "Je recommande.",
+      "date": "2026-01-16T17:34:14.867000",
+      "platform": "Airbnb"
+    },
+    {
+      "id": "f70b1dc6-bb96-4fe1-9f58-a02a4e85da1c",
+      "guest_name": "Wallet Benjamin",
+      "rating": 10,
+      "comment": "parfait",
+      "date": "2026-01-14T19:48:05.237000",
+      "platform": "Airbnb"
+    },
+    {
+      "id": "a914d6ca-56eb-477e-b76a-e0ae25360444",
+      "guest_name": "Justine Castelain",
+      "rating": 10,
+      "comment": "Logement correspondant en tout point à l’annonce. Je suis très satisfaite de mon séjour professionnel dans cet appartement. Je recommande !",
+      "date": "2026-01-13T17:13:34.691000",
+      "platform": "Airbnb"
+    },
+    {
+      "id": "d8d51d5b-d0e4-4c64-b781-fbc9bbe934a2",
+      "guest_name": "Mario Jose Giacomelli",
+      "rating": 10,
+      "comment": "Todo muy bueno \nEl dueño tendría que ser más preciso para enviar la ubicación se nos complico primero para dar con el piso en un momento pensamos que era una estafa, para que el dueño lo tenga en cuenta, después todo excelente",
+      "date": "2026-01-13T13:39:49.000000",
+      "platform": "Booking"
+    },
+    {
+      "id": "c64979d9-4397-450c-a4e1-6a9b3389095e",
+      "guest_name": "Sinty Kalnina",
+      "rating": 10,
+      "comment": "Everything good for short stay. Only thing as listed in description, there is no wifi. And not good isolation of the sound, can hear all night long as people clacking the entrance doors.\n Also good thing that private parking is available.",
+      "date": "2026-01-12T16:38:48.387000",
+      "platform": "Airbnb"
+    },
+    {
+      "id": "afd36f03-d17c-4d6c-a2aa-c166f80b910a",
+      "guest_name": "Kathleen Planquette",
+      "rating": 10,
+      "comment": "Super séjour, tout s’est très bien déroulé. Nous sommes satisfaits :)",
+      "date": "2026-01-11T18:30:59.150000",
+      "platform": "Airbnb"
+    },
+    {
+      "id": "c654345c-05f7-4eac-b136-20fc543e5d9b",
+      "guest_name": "Leia Fremont",
+      "rating": 10,
+      "comment": "j'ai étais très bien accueilli a répondu à la minute de la demande très accueillant l'airb'b étais très propre pas de bruit de voisin vraiment très bien",
+      "date": "2026-01-11T08:41:19.458000",
+      "platform": "Airbnb"
+    },
+    {
+      "id": "43ff8c84-748a-49ce-89e9-a49b027ac002",
+      "guest_name": "Quentin Le Picault",
+      "rating": 10,
+      "comment": "Parfait !!!!",
+      "date": "2026-01-10T16:56:37.150000",
+      "platform": "Airbnb"
+    },
+    {
+      "id": "2648cc02-8eb2-44bd-a246-915d4bca5981",
+      "guest_name": "Garcia Hupin",
+      "rating": 10,
+      "comment": "Emplacement. Possibilité de se garer.",
+      "date": "2026-01-10T10:27:21.000000",
+      "platform": "Booking"
+    },
+    {
+      "id": "0893b49e-4940-4515-ba2a-959a22e4a51b",
+      "guest_name": "Gilles Dupire",
+      "rating": 10,
+      "comment": "je recommande .",
+      "date": "2026-01-09T16:45:54.457000",
+      "platform": "Airbnb"
+    },
+    {
+      "id": "f175b5ba-2b40-4ed6-a727-c29c807c99a2",
+      "guest_name": "Mathylde Charlotte",
+      "rating": 10,
+      "comment": "Génial ce n’étais pas prévu de rester mais puisque j’ai adoré je suis rester 2 jours.",
+      "date": "2026-01-09T12:44:02.150000",
+      "platform": "Airbnb"
+    },
+    {
+      "id": "b5b99ccb-df30-4007-933b-426138b57a1a",
+      "guest_name": "Kevin Sweertvaegher",
+      "rating": 10,
+      "comment": "Parfait,  je reviendrai avec grand plaisir.",
+      "date": "2026-01-08T21:07:31.319000",
+      "platform": "Airbnb"
+    },
+    {
+      "id": "7fa2893c-bb9d-4476-897a-fe4cad5b8897",
+      "guest_name": "James Gazeau",
+      "rating": 10,
+      "comment": "logement fonctionnel.\ntrès bien situé.\ntrès agréable d avoir une place de stationnement couverte.\nMerci à Benjamin.",
+      "date": "2026-01-08T14:04:36.820000",
+      "platform": "Airbnb"
+    },
+    {
+      "id": "3466811b-6a88-454a-9323-5687d178e358",
+      "guest_name": "Patricia Konczak",
+      "rating": 10,
+      "comment": "emplacement, logement impeccable",
+      "date": "2026-01-08T04:42:40.201000",
+      "platform": "Airbnb"
+    },
+    {
+      "id": "08a7b578-1723-4117-b328-fb58288705c6",
+      "guest_name": "Octavio Carmona",
+      "rating": 10,
+      "comment": ":) Location in Beauvais is fantastic\r\n:) Feels like home\r\n:) Warm apartment in winter is perfect\r\n:) All services ans stores very close\r\n:) Easy to enter and go out, also elevator is appreciated when traveling wiht luggage\r\n:) We recommend it (family 2 adults 2 children)",
+      "date": "2026-01-06T15:19:44.000000",
+      "platform": "Booking"
+    }
+  ]
 }
