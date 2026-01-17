@@ -99,21 +99,33 @@
 
     // Charger et afficher les avis
     async function loadReviews(containerId, limit = 15) {
+        console.log('loadReviews called with:', containerId, limit);
         const container = document.getElementById(containerId);
-        if (!container) return;
+        console.log('Container found:', !!container, container);
+
+        if (!container) {
+            console.error('Container not found:', containerId);
+            return;
+        }
 
         try {
+            console.log('Fetching reviews from:', REVIEWS_JSON_PATH);
             const response = await fetch(REVIEWS_JSON_PATH);
+            console.log('Fetch response:', response.ok, response.status);
+
             if (!response.ok) throw new Error('Failed to fetch reviews');
 
             const data = await response.json();
+            console.log('Reviews data:', data);
 
             if (!data.reviews || data.reviews.length === 0) {
+                console.log('No reviews found');
                 container.innerHTML = '<p class="no-reviews">Aucun avis disponible pour le moment.</p>';
                 return;
             }
 
             // Vider le conteneur
+            console.log('Clearing container and creating grid');
             container.innerHTML = '';
 
             // Créer la grille
@@ -122,11 +134,15 @@
 
             // Ajouter les avis (limité au nombre demandé)
             const reviewsToShow = data.reviews.slice(0, limit);
-            reviewsToShow.forEach(review => {
+            console.log('Reviews to show:', reviewsToShow.length);
+
+            reviewsToShow.forEach((review, index) => {
+                console.log('Adding review', index + 1, review.guest_name);
                 grid.appendChild(createReviewCard(review));
             });
 
             container.appendChild(grid);
+            console.log('Grid appended to container, reviews loaded!');
 
             // Réinitialiser les animations si nécessaire
             if (typeof initScrollAnimations === 'function') {
