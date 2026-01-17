@@ -83,6 +83,7 @@ jobs:
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v5
         with:
+          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
           commit-message: "Update reviews from Channex"
           title: "🔄 Mise à jour avis Channex"
           body: "Mise à jour automatique des 15 derniers avis (note >= 9/10)"
