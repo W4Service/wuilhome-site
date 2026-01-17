@@ -77,10 +77,12 @@ jobs:
           console.log('Filtered reviews (rating >= 9):', sortedReviews.length);
           SCRIPT
 
-      - name: Commit and push
+       - name: Commit and push
         run: |
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git config user.name "github-actions[bot]"
           git add data/reviews.json
           git diff --staged --quiet || git commit -m "Update reviews from Channex"
           git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
