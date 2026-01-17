@@ -146,32 +146,58 @@
 
     // Charger automatiquement si l'élément existe
     document.addEventListener('DOMContentLoaded', function() {
-        // Pour index.html - charger au clic sur l'onglet Voyageurs
-        const travelersTab = document.querySelector('[data-target="travelers"]');
+        // Pour index.html - charger quand l'onglet Voyageurs devient actif
+        const travelersContent = document.getElementById('travelers');
         const travelersContainer = document.getElementById('travelers-reviews');
 
-        if (travelersTab && travelersContainer) {
+        if (travelersContent && travelersContainer) {
             let loaded = false;
-            travelersTab.addEventListener('click', function() {
-                if (!loaded) {
-                    loadReviews('travelers-reviews', 3);
-                    loaded = true;
-                }
+
+            // Observer les changements de classe pour détecter l'activation de l'onglet
+            const observer = new MutationObserver(function(mutations) {
+                mutations.forEach(function(mutation) {
+                    if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+                        if (travelersContent.classList.contains('active') && !loaded) {
+                            loadReviews('travelers-reviews', 3);
+                            loaded = true;
+                        }
+                    }
+                });
             });
+
+            observer.observe(travelersContent, { attributes: true });
+
+            // Si l'onglet est déjà actif au chargement
+            if (travelersContent.classList.contains('active')) {
+                loadReviews('travelers-reviews', 3);
+                loaded = true;
+            }
         }
 
-        // Pour avis/index.html - charger au clic sur l'onglet Voyageurs
-        const guestsTab = document.querySelector('[data-target="guests"]');
+        // Pour avis/index.html - charger quand l'onglet Voyageurs devient actif
+        const guestsContent = document.getElementById('guests');
         const guestsContainer = document.getElementById('guests-reviews');
 
-        if (guestsTab && guestsContainer) {
+        if (guestsContent && guestsContainer) {
             let loaded = false;
-            guestsTab.addEventListener('click', function() {
-                if (!loaded) {
-                    loadReviews('guests-reviews', 15);
-                    loaded = true;
-                }
+
+            const observer = new MutationObserver(function(mutations) {
+                mutations.forEach(function(mutation) {
+                    if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+                        if (guestsContent.classList.contains('active') && !loaded) {
+                            loadReviews('guests-reviews', 15);
+                            loaded = true;
+                        }
+                    }
+                });
             });
+
+            observer.observe(guestsContent, { attributes: true });
+
+            if (guestsContent.classList.contains('active')) {
+                loadReviews('guests-reviews', 15);
+                loaded = true;
+            }
         }
     });
 })();
