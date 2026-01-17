@@ -25,8 +25,10 @@
 
     // Générer les étoiles
     function generateStars(rating) {
-        const fullStars = Math.floor(rating);
-        const hasHalfStar = rating % 1 >= 0.5;
+        // Convertir la note /10 en /5
+        const ratingOutOf5 = rating / 2;
+        const fullStars = Math.floor(ratingOutOf5);
+        const hasHalfStar = ratingOutOf5 % 1 >= 0.5;
         let stars = '';
 
         for (let i = 0; i < fullStars; i++) {
