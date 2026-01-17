@@ -7,3 +7,6 @@
 
 # Logs
 *.log
+
+# n8n workflows (local only)
+n8n-workflow-*.json
