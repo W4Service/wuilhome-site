@@ -75,6 +75,12 @@
         const card = document.createElement('div');
         card.className = 'testimonial-card' + (isAnimated ? ' animate-on-scroll' : '');
 
+        // Forcer la visibilité si non animé
+        if (!isAnimated) {
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0)';
+        }
+
         const platformIcon = platformIcons[review.platform] || platformIcons['Booking'];
         const platformName = review.platform === 'BookingCom' ? 'Booking.com' : review.platform;
 
@@ -138,7 +144,7 @@
 
             reviewsToShow.forEach((review, index) => {
                 console.log('Adding review', index + 1, review.guest_name);
-                grid.appendChild(createReviewCard(review));
+                grid.appendChild(createReviewCard(review, false));
             });
 
             container.appendChild(grid);
