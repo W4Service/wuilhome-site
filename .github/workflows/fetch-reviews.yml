@@ -10,6 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      pull-requests: write
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -24,22 +25,28 @@ jobs:
             -H "Content-Type: application/json" \
             -H "user-api-key: ${CHANNEX_API_KEY}" \
             -o channex_response.json
+          cat channex_response.json
 
       - name: Transform and filter reviews
         run: |
           node << 'SCRIPT'
           const fs = require('fs');
           const response = JSON.parse(fs.readFileSync('channex_response.json', 'utf8'));
+          
           const reviews = (response.data || []).map(r => {
             const attrs = r.attributes || {};
+            
+            // Extraire le commentaire selon la plateforme
             let comment = '';
             if (attrs.raw_content?.public_review) {
               comment = attrs.raw_content.public_review;
             } else if (attrs.raw_content?.positive) {
               comment = attrs.raw_content.positive;
             } else if (attrs.content) {
+              // Nettoyer le content (enlever "Public review:" etc.)
               comment = attrs.content.replace(/^(Public review:|Headline:|Positive:|Negative:)\s*/gi, '').trim();
             }
+            
             return {
               id: r.id,
               guest_name: attrs.guest_name || 'Voyageur',
@@ -49,22 +56,35 @@ jobs:
               platform: attrs.ota === 'AirBNB' ? 'Airbnb' : 'Booking'
             };
           }).filter(r => {
+            // Doit avoir un commentaire
             if (!r.comment || r.comment.length < 5) return false;
+            
+            // Filtrer par note (sur 10)
+            // Airbnb: 10/10 seulement (équivalent 5/5)
+            // Booking: >= 9/10
             return r.rating >= 9;
           });
-          const sortedReviews = reviews.sort((a, b) => new Date(b.date) - new Date(a.date)).slice(0, 15);
+          
+          // Trier par date et garder les 15 plus récents
+          const sortedReviews = reviews
+            .sort((a, b) => new Date(b.date) - new Date(a.date))
+            .slice(0, 15);
+          
           fs.writeFileSync('data/reviews.json', JSON.stringify({
             updated_at: new Date().toISOString(),
             count: sortedReviews.length,
             reviews: sortedReviews
           }, null, 2));
-          console.log('Filtered reviews:', sortedReviews.length);
+          
+          console.log('Total reviews fetched:', response.data?.length || 0);
+          console.log('Filtered reviews (rating >= 9):', sortedReviews.length);
           SCRIPT
 
-      - name: Commit and push
-        run: |
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git config user.name "github-actions[bot]"
-          git add data/reviews.json
-          git diff --staged --quiet || git commit -m "Update reviews from Channex"
-          git push
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v5
+        with:
+          commit-message: "Update reviews from Channex"
+          title: "🔄 Mise à jour avis Channex"
+          body: "Mise à jour automatique des 15 derniers avis (note >= 9/10)"
+          branch: auto-update-reviews
+          delete-branch: true
