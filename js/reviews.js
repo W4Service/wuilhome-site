@@ -146,58 +146,37 @@
 
     // Charger automatiquement si l'élément existe
     document.addEventListener('DOMContentLoaded', function() {
-        // Pour index.html - charger quand l'onglet Voyageurs devient actif
-        const travelersContent = document.getElementById('travelers');
-        const travelersContainer = document.getElementById('travelers-reviews');
+        // Utiliser un délai pour s'assurer que main.js a attaché ses listeners
+        setTimeout(function() {
+            // Pour index.html - charger quand on clique sur l'onglet Voyageurs
+            const travelersBtn = document.querySelector('[data-target="travelers"]');
 
-        if (travelersContent && travelersContainer) {
-            let loaded = false;
-
-            // Observer les changements de classe pour détecter l'activation de l'onglet
-            const observer = new MutationObserver(function(mutations) {
-                mutations.forEach(function(mutation) {
-                    if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
-                        if (travelersContent.classList.contains('active') && !loaded) {
+            if (travelersBtn) {
+                let loaded = false;
+                travelersBtn.addEventListener('click', function() {
+                    if (!loaded) {
+                        setTimeout(function() {
                             loadReviews('travelers-reviews', 3);
-                            loaded = true;
-                        }
+                        }, 100);
+                        loaded = true;
                     }
                 });
-            });
-
-            observer.observe(travelersContent, { attributes: true });
-
-            // Si l'onglet est déjà actif au chargement
-            if (travelersContent.classList.contains('active')) {
-                loadReviews('travelers-reviews', 3);
-                loaded = true;
             }
-        }
 
-        // Pour avis/index.html - charger quand l'onglet Voyageurs devient actif
-        const guestsContent = document.getElementById('guests');
-        const guestsContainer = document.getElementById('guests-reviews');
+            // Pour avis/index.html - charger quand on clique sur l'onglet Voyageurs
+            const guestsBtn = document.querySelector('[data-target="guests"]');
 
-        if (guestsContent && guestsContainer) {
-            let loaded = false;
-
-            const observer = new MutationObserver(function(mutations) {
-                mutations.forEach(function(mutation) {
-                    if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
-                        if (guestsContent.classList.contains('active') && !loaded) {
+            if (guestsBtn) {
+                let loaded = false;
+                guestsBtn.addEventListener('click', function() {
+                    if (!loaded) {
+                        setTimeout(function() {
                             loadReviews('guests-reviews', 15);
-                            loaded = true;
-                        }
+                        }, 100);
+                        loaded = true;
                     }
                 });
-            });
-
-            observer.observe(guestsContent, { attributes: true });
-
-            if (guestsContent.classList.contains('active')) {
-                loadReviews('guests-reviews', 15);
-                loaded = true;
             }
-        }
+        }, 100);
     });
 })();
