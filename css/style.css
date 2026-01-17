@@ -1121,6 +1121,16 @@ nav.scrolled {
     font-size: 0.85rem;
     letter-spacing: 2px;
 }
+
+.testimonial-rating .booking-rating {
+    background: #003580;
+    color: white;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 0;
+}
 /* Reviews Widget - Channex */
 .reviews-grid {
     display: grid;

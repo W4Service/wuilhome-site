@@ -23,10 +23,12 @@
         return date.toLocaleDateString('fr-FR', options);
     }
 
-    // Générer les étoiles
+    // Générer les étoiles (Airbnb uniquement)
     function generateStars(rating) {
-        const fullStars = Math.floor(rating);
-        const hasHalfStar = rating % 1 >= 0.5;
+        // Convertir la note /10 en /5
+        const ratingOutOf5 = rating / 2;
+        const fullStars = Math.floor(ratingOutOf5);
+        const hasHalfStar = ratingOutOf5 % 1 >= 0.5;
         let stars = '';
 
         for (let i = 0; i < fullStars; i++) {
@@ -39,6 +41,17 @@
             stars += '☆';
         }
         return stars;
+    }
+
+    // Générer l'affichage du rating selon la plateforme
+    function formatRating(rating, platform) {
+        if (platform === 'Booking' || platform === 'BookingCom') {
+            // Booking.com : afficher la note sur 10
+            return `<span class="booking-rating">${rating}/10</span>`;
+        } else {
+            // Airbnb : afficher les étoiles
+            return generateStars(rating);
+        }
     }
 
     // Obtenir les initiales du nom
@@ -76,7 +89,7 @@
                 <div class="testimonial-info">
                     <div class="name">${review.guest_name}</div>
                     <div class="role">${formatDate(review.date)}</div>
-                    <div class="testimonial-rating">${generateStars(review.rating)}</div>
+                    <div class="testimonial-rating">${formatRating(review.rating, review.platform)}</div>
                 </div>
             </div>
         `;
