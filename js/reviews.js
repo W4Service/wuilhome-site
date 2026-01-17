@@ -146,37 +146,46 @@
 
     // Charger automatiquement si l'élément existe
     document.addEventListener('DOMContentLoaded', function() {
-        // Utiliser un délai pour s'assurer que main.js a attaché ses listeners
+        console.log('Reviews.js: DOM Content Loaded');
+
+        // Attacher les listeners après un court délai
         setTimeout(function() {
             // Pour index.html - charger quand on clique sur l'onglet Voyageurs
             const travelersBtn = document.querySelector('[data-target="travelers"]');
+            console.log('Reviews.js: Travelers button found:', !!travelersBtn);
 
             if (travelersBtn) {
                 let loaded = false;
-                travelersBtn.addEventListener('click', function() {
+                travelersBtn.addEventListener('click', function(e) {
+                    console.log('Reviews.js: Travelers button clicked, loaded:', loaded);
                     if (!loaded) {
-                        setTimeout(function() {
-                            loadReviews('travelers-reviews', 3);
-                        }, 100);
                         loaded = true;
+                        // Attendre que l'onglet soit visible
+                        requestAnimationFrame(function() {
+                            console.log('Reviews.js: Loading travelers reviews...');
+                            loadReviews('travelers-reviews', 3);
+                        });
                     }
-                });
+                }, true); // Use capture phase
             }
 
             // Pour avis/index.html - charger quand on clique sur l'onglet Voyageurs
             const guestsBtn = document.querySelector('[data-target="guests"]');
+            console.log('Reviews.js: Guests button found:', !!guestsBtn);
 
             if (guestsBtn) {
                 let loaded = false;
-                guestsBtn.addEventListener('click', function() {
+                guestsBtn.addEventListener('click', function(e) {
+                    console.log('Reviews.js: Guests button clicked, loaded:', loaded);
                     if (!loaded) {
-                        setTimeout(function() {
-                            loadReviews('guests-reviews', 15);
-                        }, 100);
                         loaded = true;
+                        requestAnimationFrame(function() {
+                            console.log('Reviews.js: Loading guests reviews...');
+                            loadReviews('guests-reviews', 15);
+                        });
                     }
-                });
+                }, true);
             }
-        }, 100);
+        }, 200);
     });
 })();
