@@ -85,19 +85,21 @@
         const platformName = review.platform === 'BookingCom' ? 'Booking.com' : review.platform;
 
         card.innerHTML = `
-            <div class="review-platform">
-                ${platformIcon}
-                <span>${platformName}</span>
-            </div>
-            <p class="testimonial-text">${truncateComment(review.comment)}</p>
-            <div class="testimonial-author">
-                <div class="testimonial-avatar" style="background: linear-gradient(135deg, #1E3A5F, #2291D3);">${getInitials(review.guest_name)}</div>
-                <div class="testimonial-info">
-                    <div class="name">${review.guest_name}</div>
-                    <div class="role">${formatDate(review.date)}</div>
-                    <div class="testimonial-rating">${formatRating(review.rating, review.platform)}</div>
+            <div class="review-header">
+                <div class="review-author-section">
+                    <div class="testimonial-avatar">${getInitials(review.guest_name)}</div>
+                    <div class="review-author-info">
+                        <div class="review-author-name">${review.guest_name}</div>
+                        <div class="review-platform-badge">
+                            ${platformIcon}
+                            <span>${platformName}</span>
+                        </div>
+                    </div>
                 </div>
+                <div class="review-rating">${formatRating(review.rating, review.platform)}</div>
             </div>
+            <p class="review-comment">${truncateComment(review.comment)}</p>
+            <div class="review-date">${formatDate(review.date)}</div>
         `;
 
         return card;
