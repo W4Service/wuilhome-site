@@ -1,7 +1,23 @@
 {
-  "updated_at": "2026-01-18T06:36:05.155Z",
+  "updated_at": "2026-01-19T06:44:08.586Z",
   "count": 15,
   "reviews": [
+    {
+      "id": "2be1b617-d874-441e-8a13-b6429c53ab98",
+      "guest_name": "dominic AUGUSTIN",
+      "rating": 9,
+      "comment": "L’accès à la location.\nAppartement spacieux et propre.\nÉquipement tout neuf.",
+      "date": "2026-01-18T13:25:09.000000",
+      "platform": "Booking"
+    },
+    {
+      "id": "2383722b-5b25-4028-8503-8f62fa3d8386",
+      "guest_name": "Calliste Denos",
+      "rating": 10,
+      "comment": "Très bon logement et hôte réactif ! Je recommande",
+      "date": "2026-01-18T13:07:11.274000",
+      "platform": "Airbnb"
+    },
     {
       "id": "c4b501a8-517b-42c3-a37a-992809463c46",
       "guest_name": "Gilles Dupire",
@@ -105,22 +121,6 @@
       "comment": "logement fonctionnel.\ntrès bien situé.\ntrès agréable d avoir une place de stationnement couverte.\nMerci à Benjamin.",
       "date": "2026-01-08T14:04:36.820000",
       "platform": "Airbnb"
-    },
-    {
-      "id": "3466811b-6a88-454a-9323-5687d178e358",
-      "guest_name": "Patricia Konczak",
-      "rating": 10,
-      "comment": "emplacement, logement impeccable",
-      "date": "2026-01-08T04:42:40.201000",
-      "platform": "Airbnb"
-    },
-    {
-      "id": "08a7b578-1723-4117-b328-fb58288705c6",
-      "guest_name": "Octavio Carmona",
-      "rating": 10,
-      "comment": ":) Location in Beauvais is fantastic\r\n:) Feels like home\r\n:) Warm apartment in winter is perfect\r\n:) All services ans stores very close\r\n:) Easy to enter and go out, also elevator is appreciated when traveling wiht luggage\r\n:) We recommend it (family 2 adults 2 children)",
-      "date": "2026-01-06T15:19:44.000000",
-      "platform": "Booking"
     }
   ]
 }
