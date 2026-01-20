@@ -1140,9 +1140,10 @@ nav.scrolled {
     margin: 0 auto;
 }
 
-/* Inverser l'ordre: avatar à droite */
-.reviews-grid .testimonial-author {
-    flex-direction: row-reverse;
+/* Repositionner le guillemet à droite pour les reviews */
+.reviews-grid .testimonial-card::before {
+    left: auto;
+    right: 20px;
 }
 
 /* Styles spécifiques pour les icônes de plateforme dans .role */
