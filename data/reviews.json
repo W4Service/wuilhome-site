@@ -1,7 +1,15 @@
 {
-  "updated_at": "2026-01-20T06:41:35.346Z",
+  "updated_at": "2026-01-21T06:41:45.048Z",
   "count": 15,
   "reviews": [
+    {
+      "id": "4d073524-2d8e-40de-b043-06100a54c984",
+      "guest_name": "Ewen Dufosse",
+      "rating": 10,
+      "comment": "Parfait !",
+      "date": "2026-01-20T17:19:34.354000",
+      "platform": "Airbnb"
+    },
     {
       "id": "2be1b617-d874-441e-8a13-b6429c53ab98",
       "guest_name": "dominic AUGUSTIN",
@@ -112,14 +120,6 @@
       "rating": 10,
       "comment": "Parfait,  je reviendrai avec grand plaisir.",
       "date": "2026-01-08T21:07:31.319000",
-      "platform": "Airbnb"
-    },
-    {
-      "id": "7fa2893c-bb9d-4476-897a-fe4cad5b8897",
-      "guest_name": "James Gazeau",
-      "rating": 10,
-      "comment": "logement fonctionnel.\ntrès bien situé.\ntrès agréable d avoir une place de stationnement couverte.\nMerci à Benjamin.",
-      "date": "2026-01-08T14:04:36.820000",
       "platform": "Airbnb"
     }
   ]
