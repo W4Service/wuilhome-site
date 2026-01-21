@@ -1149,16 +1149,17 @@ nav.scrolled {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Guillemets orange en bas à droite */
+/* Guillemet unique en bas à droite */
 .reviews-grid .testimonial-card::after {
-    content: '❝❝';
+    content: '❝';
     position: absolute;
     bottom: 15px;
     right: 20px;
-    font-size: 2.5rem;
+    font-size: 3rem;
     color: var(--coral);
-    opacity: 0.3;
+    opacity: 0.5;
     line-height: 1;
+    z-index: 0;
 }
 
 /* Header avec nom et logo */
@@ -1200,7 +1201,7 @@ nav.scrolled {
 /* Rating avec étoiles ou badge */
 .review-rating {
     margin-bottom: 0.8rem;
-    color: var(--black);
+    color: var(--coral);
     font-size: 0.9rem;
     letter-spacing: 1px;
 }
@@ -1222,6 +1223,8 @@ nav.scrolled {
     line-height: 1.5;
     color: var(--black);
     margin: 0;
+    position: relative;
+    z-index: 1;
 }
 
 .reviews-limit-3 .reviews-grid {
