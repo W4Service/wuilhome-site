@@ -1140,36 +1140,88 @@ nav.scrolled {
     margin: 0 auto;
 }
 
-/* Repositionner le guillemet à droite pour les reviews */
-.reviews-grid .testimonial-card::before {
-    left: auto;
+/* Nouveau design de carte avis (style Airbnb) */
+.reviews-grid .testimonial-card {
+    position: relative;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Guillemets orange en bas à droite */
+.reviews-grid .testimonial-card::after {
+    content: '❝❝';
+    position: absolute;
+    bottom: 15px;
     right: 20px;
+    font-size: 2.5rem;
+    color: var(--coral);
+    opacity: 0.3;
+    line-height: 1;
 }
 
-/* Styles spécifiques pour les icônes de plateforme dans .role */
-.reviews-grid .testimonial-card .role {
+/* Header avec nom et logo */
+.review-header {
     display: flex;
-    align-items: center;
-    gap: 0.4rem;
-    margin-top: -0.3rem;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.8rem;
 }
 
-.reviews-grid .testimonial-card .role svg,
-.reviews-grid .testimonial-card .role img {
-    width: 14px;
-    height: 14px;
+.review-guest-info {
+    flex: 1;
+}
+
+.review-name {
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--black);
+    margin-bottom: 0.25rem;
+}
+
+.review-date {
+    font-size: 0.8rem;
+    color: #717171;
+}
+
+.review-platform-logo {
     flex-shrink: 0;
+    margin-left: 1rem;
+}
+
+.review-platform-logo svg,
+.review-platform-logo img {
+    width: 24px;
+    height: 24px;
+    display: block;
+}
+
+/* Rating avec étoiles ou badge */
+.review-rating {
+    margin-bottom: 0.8rem;
+    color: var(--black);
+    font-size: 0.9rem;
+    letter-spacing: 1px;
 }
 
 /* Badge Booking.com */
 .booking-rating {
-    background: var(--blue-medium);
+    background: #003580;
     color: white;
-    padding: 0.3rem 0.6rem;
-    border-radius: 6px;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
     font-weight: 600;
     font-size: 0.85rem;
     display: inline-block;
+}
+
+/* Commentaire */
+.review-comment {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: var(--black);
+    margin: 0;
 }
 
 .reviews-limit-3 .reviews-grid {
