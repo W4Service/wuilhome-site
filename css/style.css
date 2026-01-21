@@ -1153,11 +1153,11 @@ nav.scrolled {
 .reviews-grid .testimonial-card::after {
     content: '❝';
     position: absolute;
-    bottom: 15px;
-    right: 20px;
+    bottom: 5px;
+    right: 15px;
     font-size: 3rem;
     color: var(--coral);
-    opacity: 0.5;
+    opacity: 1;
     line-height: 1;
     z-index: 0;
 }
