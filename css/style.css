@@ -1149,7 +1149,12 @@ nav.scrolled {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Guillemet unique en bas à droite */
+/* Désactiver le guillemet du haut pour les reviews Channex */
+.reviews-grid .testimonial-card::before {
+    content: none;
+}
+
+/* Guillemet unique en bas à droite pour les reviews Channex */
 .reviews-grid .testimonial-card::after {
     content: '❝';
     position: absolute;
