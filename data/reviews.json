@@ -1,7 +1,15 @@
 {
-  "updated_at": "2026-01-21T06:41:45.048Z",
+  "updated_at": "2026-01-22T06:40:22.045Z",
   "count": 15,
   "reviews": [
+    {
+      "id": "def249f1-5f5a-48fe-81b6-5993d5585ba7",
+      "guest_name": "anne Huaux Deceulener",
+      "rating": 9,
+      "comment": "Logement petit mais cosy, très calme et la baie vitrée sur le jardin est super agréable. Proximité du centre à pied. Studio joliment décoré et pratique",
+      "date": "2026-01-21T22:08:31.000000",
+      "platform": "Booking"
+    },
     {
       "id": "4d073524-2d8e-40de-b043-06100a54c984",
       "guest_name": "Ewen Dufosse",
@@ -112,14 +120,6 @@
       "rating": 10,
       "comment": "Génial ce n’étais pas prévu de rester mais puisque j’ai adoré je suis rester 2 jours.",
       "date": "2026-01-09T12:44:02.150000",
-      "platform": "Airbnb"
-    },
-    {
-      "id": "b5b99ccb-df30-4007-933b-426138b57a1a",
-      "guest_name": "Kevin Sweertvaegher",
-      "rating": 10,
-      "comment": "Parfait,  je reviendrai avec grand plaisir.",
-      "date": "2026-01-08T21:07:31.319000",
       "platform": "Airbnb"
     }
   ]
