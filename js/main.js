@@ -165,6 +165,32 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // GTM DataLayer events tracking
+    // WhatsApp click tracking
+    document.querySelectorAll('a[href*="whatsapp"], a[href*="wa.me"]').forEach(link => {
+        link.addEventListener('click', () => {
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                'event': 'whatsapp_click',
+                'event_category': 'contact',
+                'event_label': window.location.pathname
+            });
+        });
+    });
+
+    // Form submit tracking
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', () => {
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                'event': 'form_submit',
+                'event_category': 'contact',
+                'event_label': 'formulaire_contact'
+            });
+        });
+    }
+
     // FAQ accordion
     const faqQuestions = document.querySelectorAll('.faq-question');
     faqQuestions.forEach(question => {
