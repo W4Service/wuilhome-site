@@ -13,6 +13,28 @@
     <link rel="manifest" href="/site.webmanifest">
     <meta name="theme-color" content="#1E3A5F">
 
+    <!-- Google Consent Mode v2 -->
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+        'analytics_storage': 'denied',
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'functionality_storage': 'granted',
+        'personalization_storage': 'denied',
+        'security_storage': 'granted',
+        'wait_for_update': 500
+    });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/tarteaucitronjs@1.19.1/tarteaucitron.min.js"></script>
+    <script>
+    tarteaucitron.init({"privacyUrl":"https://wuilhome.com/politique-confidentialite/","bodyPosition":"bottom","hashtag":"#tarteaucitron","cookieName":"tarteaucitron","orientation":"bottom","groupServices":false,"obligatoryTimer":20,"showAlertSmall":false,"cookieslist":false,"closePopup":false,"showIcon":true,"iconPosition":"BottomRight","adblocker":false,"DenyAllCta":true,"AcceptAllCta":true,"highPrivacy":true,"alwaysNeedConsent":false,"handleBrowserDNTRequest":false,"removeCredit":false,"moreInfoLink":true,"useExternalCss":false,"useExternalJs":false,"readmoreLink":"https://wuilhome.com/politique-confidentialite/","mandatory":false,"mandatoryCta":false,"googleConsentMode":true});
+    tarteaucitron.services.gtmConsent={"key":"gtmConsent","type":"api","name":"Google Tag Manager","uri":"https://policies.google.com/privacy","needConsent":true,"cookies":["_ga","_gid","_gat","_gcl_au"],"js":function(){gtag("consent","update",{"analytics_storage":"granted","ad_storage":"granted","ad_user_data":"granted","ad_personalization":"granted"});},"fallback":function(){gtag("consent","update",{"analytics_storage":"denied","ad_storage":"denied","ad_user_data":"denied","ad_personalization":"denied"});}};
+    (tarteaucitron.job=tarteaucitron.job||[]).push("gtmConsent");
+    </script>
+
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],

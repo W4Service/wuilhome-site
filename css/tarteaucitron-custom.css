@@ -1,0 +1,100 @@
+/* Tarteaucitron - Style personnalisé Wuilhome */
+
+/* Bandeau principal */
+#tarteaucitronRoot #tarteaucitronAlertBig {
+    background: #1a1a2e !important;
+    font-family: 'Inter', 'Segoe UI', sans-serif !important;
+    border-top: 3px solid #e8734a !important;
+    padding: 20px 30px !important;
+}
+
+/* Texte du bandeau */
+#tarteaucitronRoot #tarteaucitronAlertBig #tarteaucitronDisclaimerAlert {
+    color: #ffffff !important;
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+}
+
+/* Bouton Accepter */
+#tarteaucitronRoot #tarteaucitronPersonalize,
+#tarteaucitronRoot #tarteaucitronPersonalize2 {
+    background: #e8734a !important;
+    color: #ffffff !important;
+    border: none !important;
+    border-radius: 8px !important;
+    padding: 10px 24px !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    transition: background 0.3s ease !important;
+}
+
+#tarteaucitronRoot #tarteaucitronPersonalize:hover,
+#tarteaucitronRoot #tarteaucitronPersonalize2:hover {
+    background: #d4633d !important;
+}
+
+/* Bouton Tout accepter */
+#tarteaucitronRoot #tarteaucitronAllAllowed,
+#tarteaucitronRoot #tarteaucitronAllAllowed2 {
+    background: #e8734a !important;
+    color: #ffffff !important;
+    border: none !important;
+    border-radius: 8px !important;
+    padding: 10px 24px !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    transition: background 0.3s ease !important;
+}
+
+#tarteaucitronRoot #tarteaucitronAllAllowed:hover,
+#tarteaucitronRoot #tarteaucitronAllAllowed2:hover {
+    background: #d4633d !important;
+}
+
+/* Bouton Tout refuser */
+#tarteaucitronRoot #tarteaucitronAllDenied,
+#tarteaucitronRoot #tarteaucitronAllDenied2 {
+    background: transparent !important;
+    color: #ffffff !important;
+    border: 2px solid #ffffff !important;
+    border-radius: 8px !important;
+    padding: 10px 24px !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+}
+
+#tarteaucitronRoot #tarteaucitronAllDenied:hover,
+#tarteaucitronRoot #tarteaucitronAllDenied2:hover {
+    background: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Bouton Personnaliser / En savoir plus */
+#tarteaucitronRoot #tarteaucitronCloseAlert {
+    color: #b0b0b0 !important;
+    font-size: 13px !important;
+    text-decoration: underline !important;
+}
+
+/* Panneau de gestion des services */
+#tarteaucitronRoot #tarteaucitron {
+    font-family: 'Inter', 'Segoe UI', sans-serif !important;
+}
+
+#tarteaucitronRoot .tarteaucitronAllow {
+    background: #e8734a !important;
+    border-radius: 6px !important;
+}
+
+#tarteaucitronRoot .tarteaucitronDeny {
+    background: #6c757d !important;
+    border-radius: 6px !important;
+}
+
+/* Icône en bas à droite */
+#tarteaucitronRoot #tarteaucitronIcon {
+    background: #e8734a !important;
+    border-radius: 50% !important;
+    bottom: 20px !important;
+    right: 20px !important;
+}
