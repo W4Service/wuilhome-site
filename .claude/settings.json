@@ -1,7 +1,9 @@
 {
   "permissions": {
     "allow": [
-      "WebFetch(domain:wuilhome.com)"
+      "WebFetch(domain:wuilhome.com)",
+      "Bash(npm pack tarteaucitronjs@1.19.1 --pack-destination /tmp/)",
+      "Bash(tar -xzf /tmp/tarteaucitronjs-1.19.1.tgz -C /tmp/)"
     ]
   }
 }
