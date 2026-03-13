@@ -43,12 +43,19 @@
     })(window,document,'script','dataLayer','GTM-5LK2LZ65');</script>
     <!-- End Google Tag Manager -->
 
-    <!-- Redirection (après tracking autorisé) -->
+    <!-- QR code scan tracking + redirection -->
     <script>
         const DESTINATION_URL = "https://wuilhome.com";
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+            'event': 'qr_code_scan',
+            'event_category': 'engagement',
+            'event_label': 'qr_redirect'
+        });
+        // Laisser le temps à GTM d'envoyer l'événement avant la redirection
         setTimeout(() => {
             window.location.href = DESTINATION_URL;
-        }, 300);
+        }, 1500);
     </script>
 
     <style>
