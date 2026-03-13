@@ -43,6 +43,30 @@
         <priority>0.9</priority>
     </url>
     <url>
+        <loc>https://wuilhome.com/zones/beauvais/</loc>
+        <lastmod>2026-03-13</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://wuilhome.com/zones/compiegne/</loc>
+        <lastmod>2026-03-13</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://wuilhome.com/zones/senlis/</loc>
+        <lastmod>2026-03-13</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://wuilhome.com/zones/clermont/</loc>
+        <lastmod>2026-03-13</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
         <loc>https://wuilhome.com/mentions-legales/</loc>
         <lastmod>2026-03-06</lastmod>
         <changefreq>yearly</changefreq>
