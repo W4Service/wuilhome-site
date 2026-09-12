@@ -1,126 +1,78 @@
 {
-  "updated_at": "2026-01-22T06:40:22.045Z",
-  "count": 15,
+  "updated_at": "2026-09-12T10:19:10.934Z",
+  "count": 9,
   "reviews": [
     {
-      "id": "def249f1-5f5a-48fe-81b6-5993d5585ba7",
-      "guest_name": "anne Huaux Deceulener",
+      "id": "849c2cbd-b623-49c7-8451-ef924dfa50fb",
+      "guest_name": "David Baer",
+      "rating": 10,
+      "comment": "Very nice place and great location.",
+      "date": "2026-09-11T14:53:30.000000",
+      "platform": "Booking"
+    },
+    {
+      "id": "8155e3d1-cdb6-4e34-8a9b-ab1653bdbb40",
+      "guest_name": "Lopez Raphael",
       "rating": 9,
-      "comment": "Logement petit mais cosy, très calme et la baie vitrée sur le jardin est super agréable. Proximité du centre à pied. Studio joliment décoré et pratique",
-      "date": "2026-01-21T22:08:31.000000",
+      "comment": "Positive: \r\n\r\nNegative: Cafetière marche pas et pas de produits à douche",
+      "date": "2026-09-11T07:51:37.000000",
       "platform": "Booking"
     },
     {
-      "id": "4d073524-2d8e-40de-b043-06100a54c984",
-      "guest_name": "Ewen Dufosse",
+      "id": "5180d11b-6a70-4715-81c7-769fdbbe5b86",
+      "guest_name": "christophe port",
       "rating": 10,
-      "comment": "Parfait !",
-      "date": "2026-01-20T17:19:34.354000",
+      "comment": "chambre séparée, agencement",
+      "date": "2026-09-10T14:01:38.000000",
+      "platform": "Booking"
+    },
+    {
+      "id": "4f8aa800-1389-4a58-b7b1-128a37fd1f17",
+      "guest_name": "Nina Houairi",
+      "rating": 10,
+      "comment": "très belle soirée dans le lieu. tout était parfait !",
+      "date": "2026-09-10T13:50:09.316000",
       "platform": "Airbnb"
     },
     {
-      "id": "2be1b617-d874-441e-8a13-b6429c53ab98",
-      "guest_name": "dominic AUGUSTIN",
+      "id": "db813fb8-b34d-45e7-a56b-e869c8db881f",
+      "guest_name": "Michael Sadowski",
+      "rating": 10,
+      "comment": "Sehr schöne moderne Wohnung in ruhiger Lage, Aussicht auf Bäume, 10 Minuten zu Fuß bis zum Beginn der Innenstadt. Sehr sauber.  Fast perfekt.",
+      "date": "2026-09-08T00:17:10.000000",
+      "platform": "Booking"
+    },
+    {
+      "id": "e0097277-e511-42a7-b077-139c76878e93",
+      "guest_name": "Mireille JOSEPH",
+      "rating": 10,
+      "comment": "Bien situé.",
+      "date": "2026-09-07T14:18:21.000000",
+      "platform": "Booking"
+    },
+    {
+      "id": "3080a839-bbf8-4bc9-9791-b3d082164c6b",
+      "guest_name": "christophe burel",
+      "rating": 10,
+      "comment": "Propreté des lieux - résidence sécurisée et calme - équipements adaptés - indications pour s’y rendre parfaites",
+      "date": "2026-09-07T10:50:28.000000",
+      "platform": "Booking"
+    },
+    {
+      "id": "5cad9a66-3c24-4ed9-9bff-e1fecb6cb2ca",
+      "guest_name": "Soufyane Sadouki",
       "rating": 9,
-      "comment": "L’accès à la location.\nAppartement spacieux et propre.\nÉquipement tout neuf.",
-      "date": "2026-01-18T13:25:09.000000",
+      "comment": "Très bon emplacement",
+      "date": "2026-09-06T10:58:28.000000",
       "platform": "Booking"
     },
     {
-      "id": "2383722b-5b25-4028-8503-8f62fa3d8386",
-      "guest_name": "Calliste Denos",
-      "rating": 10,
-      "comment": "Très bon logement et hôte réactif ! Je recommande",
-      "date": "2026-01-18T13:07:11.274000",
-      "platform": "Airbnb"
-    },
-    {
-      "id": "c4b501a8-517b-42c3-a37a-992809463c46",
-      "guest_name": "Gilles Dupire",
-      "rating": 10,
-      "comment": "Je recommande.",
-      "date": "2026-01-16T17:34:14.867000",
-      "platform": "Airbnb"
-    },
-    {
-      "id": "f70b1dc6-bb96-4fe1-9f58-a02a4e85da1c",
-      "guest_name": "Wallet Benjamin",
-      "rating": 10,
-      "comment": "parfait",
-      "date": "2026-01-14T19:48:05.237000",
-      "platform": "Airbnb"
-    },
-    {
-      "id": "a914d6ca-56eb-477e-b76a-e0ae25360444",
-      "guest_name": "Justine Castelain",
-      "rating": 10,
-      "comment": "Logement correspondant en tout point à l’annonce. Je suis très satisfaite de mon séjour professionnel dans cet appartement. Je recommande !",
-      "date": "2026-01-13T17:13:34.691000",
-      "platform": "Airbnb"
-    },
-    {
-      "id": "d8d51d5b-d0e4-4c64-b781-fbc9bbe934a2",
-      "guest_name": "Mario Jose Giacomelli",
-      "rating": 10,
-      "comment": "Todo muy bueno \nEl dueño tendría que ser más preciso para enviar la ubicación se nos complico primero para dar con el piso en un momento pensamos que era una estafa, para que el dueño lo tenga en cuenta, después todo excelente",
-      "date": "2026-01-13T13:39:49.000000",
+      "id": "f1732891-a4cf-4147-bd46-03f7f4404413",
+      "guest_name": "IDRISSI Omar",
+      "rating": 9,
+      "comment": "Propreté",
+      "date": "2026-09-05T12:49:17.000000",
       "platform": "Booking"
-    },
-    {
-      "id": "c64979d9-4397-450c-a4e1-6a9b3389095e",
-      "guest_name": "Sinty Kalnina",
-      "rating": 10,
-      "comment": "Everything good for short stay. Only thing as listed in description, there is no wifi. And not good isolation of the sound, can hear all night long as people clacking the entrance doors.\n Also good thing that private parking is available.",
-      "date": "2026-01-12T16:38:48.387000",
-      "platform": "Airbnb"
-    },
-    {
-      "id": "afd36f03-d17c-4d6c-a2aa-c166f80b910a",
-      "guest_name": "Kathleen Planquette",
-      "rating": 10,
-      "comment": "Super séjour, tout s’est très bien déroulé. Nous sommes satisfaits :)",
-      "date": "2026-01-11T18:30:59.150000",
-      "platform": "Airbnb"
-    },
-    {
-      "id": "c654345c-05f7-4eac-b136-20fc543e5d9b",
-      "guest_name": "Leia Fremont",
-      "rating": 10,
-      "comment": "j'ai étais très bien accueilli a répondu à la minute de la demande très accueillant l'airb'b étais très propre pas de bruit de voisin vraiment très bien",
-      "date": "2026-01-11T08:41:19.458000",
-      "platform": "Airbnb"
-    },
-    {
-      "id": "43ff8c84-748a-49ce-89e9-a49b027ac002",
-      "guest_name": "Quentin Le Picault",
-      "rating": 10,
-      "comment": "Parfait !!!!",
-      "date": "2026-01-10T16:56:37.150000",
-      "platform": "Airbnb"
-    },
-    {
-      "id": "2648cc02-8eb2-44bd-a246-915d4bca5981",
-      "guest_name": "Garcia Hupin",
-      "rating": 10,
-      "comment": "Emplacement. Possibilité de se garer.",
-      "date": "2026-01-10T10:27:21.000000",
-      "platform": "Booking"
-    },
-    {
-      "id": "0893b49e-4940-4515-ba2a-959a22e4a51b",
-      "guest_name": "Gilles Dupire",
-      "rating": 10,
-      "comment": "je recommande .",
-      "date": "2026-01-09T16:45:54.457000",
-      "platform": "Airbnb"
-    },
-    {
-      "id": "f175b5ba-2b40-4ed6-a727-c29c807c99a2",
-      "guest_name": "Mathylde Charlotte",
-      "rating": 10,
-      "comment": "Génial ce n’étais pas prévu de rester mais puisque j’ai adoré je suis rester 2 jours.",
-      "date": "2026-01-09T12:44:02.150000",
-      "platform": "Airbnb"
     }
   ]
 }
