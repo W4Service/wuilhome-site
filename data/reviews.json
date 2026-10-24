@@ -1,125 +1,109 @@
 {
-  "updated_at": "2026-01-22T06:40:22.045Z",
-  "count": 15,
+  "updated_at": "2026-10-24T10:32:21.176Z",
+  "count": 13,
   "reviews": [
     {
-      "id": "def249f1-5f5a-48fe-81b6-5993d5585ba7",
-      "guest_name": "anne Huaux Deceulener",
-      "rating": 9,
-      "comment": "Logement petit mais cosy, très calme et la baie vitrée sur le jardin est super agréable. Proximité du centre à pied. Studio joliment décoré et pratique",
-      "date": "2026-01-21T22:08:31.000000",
+      "id": "f212f795-3a2f-4fa3-8500-96fae7aaad19",
+      "guest_name": "mohammad Oujeil",
+      "rating": 10,
+      "comment": "Small and cozy! Cery warm and has all the amenities you need. Its not super new furniture but its decent all round. Secure and safe.",
+      "date": "2026-10-23T11:45:04.000000",
       "platform": "Booking"
     },
     {
-      "id": "4d073524-2d8e-40de-b043-06100a54c984",
-      "guest_name": "Ewen Dufosse",
+      "id": "77b6daca-2cf5-4b87-b960-e8005af3d04f",
+      "guest_name": "Amath Sy Kebe",
       "rating": 10,
-      "comment": "Parfait !",
-      "date": "2026-01-20T17:19:34.354000",
+      "comment": "Casa muy limpio y tranquila",
+      "date": "2026-10-23T10:01:24.296000",
       "platform": "Airbnb"
     },
     {
-      "id": "2be1b617-d874-441e-8a13-b6429c53ab98",
-      "guest_name": "dominic AUGUSTIN",
-      "rating": 9,
-      "comment": "L’accès à la location.\nAppartement spacieux et propre.\nÉquipement tout neuf.",
-      "date": "2026-01-18T13:25:09.000000",
+      "id": "92495981-6718-467b-bd25-7e3737b638cf",
+      "guest_name": "Johanna Dufour",
+      "rating": 10,
+      "comment": "Logement impeccable.  Tout confort. Idéal pour un week-end en amoureux et pour découvrir l'Oise.",
+      "date": "2026-10-22T20:41:26.768000",
+      "platform": "Airbnb"
+    },
+    {
+      "id": "96ee1c3c-62da-4eeb-a1ad-071310f525d6",
+      "guest_name": "Chelie Stockbridge",
+      "rating": 10,
+      "comment": "Thank you for a wonderful stay. They even left some Yorkshire teabags for us British folks! A beautiful town which was very quiet at night. We stopped over on our drive from the UK to Disneyland Paris. Highly recommend.",
+      "date": "2026-10-22T14:56:41.492000",
+      "platform": "Airbnb"
+    },
+    {
+      "id": "12a196c6-5f00-4d67-95a6-8b1c5ba79d85",
+      "guest_name": "Iris Ribeiro de lima",
+      "rating": 10,
+      "comment": "Maison tranquille bien illuminé à côté du centre-ville parking devant , excellent",
+      "date": "2026-10-22T12:58:20.000000",
       "platform": "Booking"
     },
     {
-      "id": "2383722b-5b25-4028-8503-8f62fa3d8386",
-      "guest_name": "Calliste Denos",
+      "id": "4cf2e987-eb9b-4a0f-8e32-0eff59fafdd9",
+      "guest_name": "Catherine Duverger",
       "rating": 10,
-      "comment": "Très bon logement et hôte réactif ! Je recommande",
-      "date": "2026-01-18T13:07:11.274000",
+      "comment": "Très bien !\nJoli logement, propre et bien aménagé.\nQuartier bruyant mais sympathique.",
+      "date": "2026-10-20T14:52:35.367000",
       "platform": "Airbnb"
     },
     {
-      "id": "c4b501a8-517b-42c3-a37a-992809463c46",
-      "guest_name": "Gilles Dupire",
+      "id": "6f15a75b-98d5-45ec-a435-0fba7e18faab",
+      "guest_name": "Melilu Swaro",
       "rating": 10,
-      "comment": "Je recommande.",
-      "date": "2026-01-16T17:34:14.867000",
+      "comment": "Beau logement, propre, fonctionnel et hyper bien situé.",
+      "date": "2026-10-20T09:48:44.526000",
       "platform": "Airbnb"
     },
     {
-      "id": "f70b1dc6-bb96-4fe1-9f58-a02a4e85da1c",
-      "guest_name": "Wallet Benjamin",
+      "id": "8e78de82-6d81-493e-85f6-975d03cdc90d",
+      "guest_name": "Adem Gasmi",
       "rating": 10,
-      "comment": "parfait",
-      "date": "2026-01-14T19:48:05.237000",
+      "comment": "J’ai passé un excellent séjour",
+      "date": "2026-10-20T09:34:34.110000",
       "platform": "Airbnb"
     },
     {
-      "id": "a914d6ca-56eb-477e-b76a-e0ae25360444",
-      "guest_name": "Justine Castelain",
+      "id": "f6484f25-fc99-4cb7-8a5e-83e2da49b82f",
+      "guest_name": "Kamal Ait Chati",
       "rating": 10,
-      "comment": "Logement correspondant en tout point à l’annonce. Je suis très satisfaite de mon séjour professionnel dans cet appartement. Je recommande !",
-      "date": "2026-01-13T17:13:34.691000",
+      "comment": "Bon sejour appartement qui correspond a l'annonce. Bien équipé et bien situé. Merci pour le café.",
+      "date": "2026-10-20T07:26:40.125000",
       "platform": "Airbnb"
     },
     {
-      "id": "d8d51d5b-d0e4-4c64-b781-fbc9bbe934a2",
-      "guest_name": "Mario Jose Giacomelli",
+      "id": "1b5ab009-5ddb-4623-b91b-a984475f4686",
+      "guest_name": "Faustine Danten",
       "rating": 10,
-      "comment": "Todo muy bueno \nEl dueño tendría que ser más preciso para enviar la ubicación se nos complico primero para dar con el piso en un momento pensamos que era una estafa, para que el dueño lo tenga en cuenta, después todo excelente",
-      "date": "2026-01-13T13:39:49.000000",
+      "comment": "Bon séjour",
+      "date": "2026-10-18T14:30:36.295000",
+      "platform": "Airbnb"
+    },
+    {
+      "id": "47d796cc-7a19-41e5-b43a-5c57d631dcad",
+      "guest_name": "Benmiloud Denise",
+      "rating": 10,
+      "comment": "Emplacement parfait \nCalme et sécurisé \nPropre et bien équipé \nCorrespondait à l’annonce",
+      "date": "2026-10-18T12:14:18.000000",
       "platform": "Booking"
     },
     {
-      "id": "c64979d9-4397-450c-a4e1-6a9b3389095e",
-      "guest_name": "Sinty Kalnina",
+      "id": "0577847a-b1c6-4162-a30e-b510be6b335b",
+      "guest_name": "Jeynalie Jacquet",
       "rating": 10,
-      "comment": "Everything good for short stay. Only thing as listed in description, there is no wifi. And not good isolation of the sound, can hear all night long as people clacking the entrance doors.\n Also good thing that private parking is available.",
-      "date": "2026-01-12T16:38:48.387000",
+      "comment": "Odeurs de renfermé dans la salle de bain, faites attention aux logements proposés par cet hôte car il y a des squatteurs, j’avais réservé un premier logement et quand j’ai pris les clés pour rentrer dans le logement il y avait déjà des personnes dans le logement donc je suis ressortie et j’ai donc envoyé un message à l’hôte, il m’a changé d’Airbnb dont ce logement là pas très propre et malheureusement pas isolé du tout, les voisins qui entendent tout à travers les murs, c’est insupportable, pour une nuit je vous conseille pas !!",
+      "date": "2026-10-18T10:09:37.540000",
       "platform": "Airbnb"
     },
     {
-      "id": "afd36f03-d17c-4d6c-a2aa-c166f80b910a",
-      "guest_name": "Kathleen Planquette",
+      "id": "5f3eaf11-15f6-4e63-834c-b4800cba46b5",
+      "guest_name": "Mathys Andrieux",
       "rating": 10,
-      "comment": "Super séjour, tout s’est très bien déroulé. Nous sommes satisfaits :)",
-      "date": "2026-01-11T18:30:59.150000",
-      "platform": "Airbnb"
-    },
-    {
-      "id": "c654345c-05f7-4eac-b136-20fc543e5d9b",
-      "guest_name": "Leia Fremont",
-      "rating": 10,
-      "comment": "j'ai étais très bien accueilli a répondu à la minute de la demande très accueillant l'airb'b étais très propre pas de bruit de voisin vraiment très bien",
-      "date": "2026-01-11T08:41:19.458000",
-      "platform": "Airbnb"
-    },
-    {
-      "id": "43ff8c84-748a-49ce-89e9-a49b027ac002",
-      "guest_name": "Quentin Le Picault",
-      "rating": 10,
-      "comment": "Parfait !!!!",
-      "date": "2026-01-10T16:56:37.150000",
-      "platform": "Airbnb"
-    },
-    {
-      "id": "2648cc02-8eb2-44bd-a246-915d4bca5981",
-      "guest_name": "Garcia Hupin",
-      "rating": 10,
-      "comment": "Emplacement. Possibilité de se garer.",
-      "date": "2026-01-10T10:27:21.000000",
-      "platform": "Booking"
-    },
-    {
-      "id": "0893b49e-4940-4515-ba2a-959a22e4a51b",
-      "guest_name": "Gilles Dupire",
-      "rating": 10,
-      "comment": "je recommande .",
-      "date": "2026-01-09T16:45:54.457000",
-      "platform": "Airbnb"
-    },
-    {
-      "id": "f175b5ba-2b40-4ed6-a727-c29c807c99a2",
-      "guest_name": "Mathylde Charlotte",
-      "rating": 10,
-      "comment": "Génial ce n’étais pas prévu de rester mais puisque j’ai adoré je suis rester 2 jours.",
-      "date": "2026-01-09T12:44:02.150000",
+      "comment": "Parfait",
+      "date": "2026-10-18T07:50:56.047000",
       "platform": "Airbnb"
     }
   ]
